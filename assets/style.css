@@ -146,3 +146,5 @@
   .series-card .btn { margin-top: 4px; }
   .posts .series-tag { color: var(--chip-text); font-weight: 600; text-decoration: none; }
   .posts .series-tag:hover { text-decoration: underline; }
+  /* Wide tables scroll inside their own box on narrow screens instead of widening the page */
+  @media (max-width: 680px) { article .body table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
