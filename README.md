@@ -11,4 +11,4 @@ Addresses are permanent: do not rename a published file. To fix a post, edit it 
 A post can pin its own address with `permalink:` (the dissertation uses `/dissertation/`).
 
 ## Dissertation
-`_posts/2026-11-16-dissertation.md` → https://hieutrungle.github.io/blog/dissertation/. Add the approved PDF as `assets/dissertation/Le_dissertation.pdf` and turn the "Full text" button into a link.
+`_posts/2026-11-15-dissertation.md` → https://hieutrungle.github.io/blog/dissertation/. Add the approved PDF as `assets/dissertation/Le_dissertation.pdf` and turn the "Full text" button into a link.

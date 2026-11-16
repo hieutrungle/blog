@@ -1,7 +1,7 @@
 ---
 title: "Spatial Intelligence for Smart Radio Environments: Learning-Based Control and Joint Placement of Mechanically Reconfigurable Reflectors"
 kind: Dissertation
-date: 2026-11-16
+date: 2026-11-15 12:00:00 -0600
 permalink: /dissertation/
 summary: "Ph.D. dissertation, Texas A&M University (expected December 2026). Positions, not pilot-based channel estimates, are enough to configure, control and place mechanically reconfigurable metallic reflectors."
 description: "Ph.D. dissertation by Hieu T. Le, Texas A&M University: learning-based control and joint placement of mechanically reconfigurable reflectors from spatial information."
