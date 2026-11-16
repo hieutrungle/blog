@@ -1,6 +1,6 @@
 # Blog: https://hieutrungle.github.io/blog/
 
-Research, study notes, and things I am learning, by Hieu T. Le. Built by GitHub Pages (Jekyll) from Markdown; no local tools needed.
+Research, study notes, and knowledge sharing by Hieu T. Le. Built by GitHub Pages (Jekyll) from Markdown; no local tools needed.
 
 ## Add a new piece
 1. Copy `TEMPLATE.md` to `_posts/YYYY-MM-DD-short-name.md` (the date and name form the address, e.g. `/blog/2026/12/short-name/`).
