@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="wrap narrow">
+  <header>
+    <div class="meta">{% if page.kind %}<span class="chip">{{ page.kind }}</span>{% endif %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if page.updated %}<span>· updated {{ page.updated | date: '%B %-d, %Y' }}</span>{% endif %}</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="lede">{{ page.subtitle }}</p>{% endif %}
+  </header>
+  <div class="body">
+{{ content }}
+  </div>
+  <p class="back"><a href="{{ '/' | relative_url }}">← All writing</a></p>
+</article>

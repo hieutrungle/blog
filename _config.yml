@@ -1,0 +1,23 @@
+title: Hieu T. Le
+description: Research, long-form work and notes by Hieu T. Le.
+author: Hieu T. Le
+url: https://hieutrungle.github.io
+baseurl: /blog
+permalink: /:year/:month/:title/
+timezone: America/Chicago
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+defaults:
+  - scope: {path: "", type: posts}
+    values: {layout: post}
+feed:
+  path: feed.xml
+exclude:
+  - README.md
+  - TEMPLATE.md
+  - LICENSE

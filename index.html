@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+description: Research, long-form work and notes by Hieu T. Le. Every piece keeps a permanent address.
+---
+<div class="wrap narrow">
+  <div class="page-head">
+    <h1>Blog</h1>
+    <p class="lede">Research, long-form work and notes. Every piece keeps a permanent address here.</p>
+  </div>
+  <ul class="posts">
+  {% for post in site.posts %}
+    <li>
+      <div class="meta">{% if post.kind %}<span class="chip">{{ post.kind }}</span>{% endif %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time></div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
