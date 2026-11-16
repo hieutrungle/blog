@@ -7,8 +7,10 @@ layout: default
     <h1>{{ page.title }}</h1>
     {% if page.subtitle %}<p class="lede">{{ page.subtitle }}</p>{% endif %}
   </header>
+  {% if page.series %}{% include series-nav.html %}{% endif %}
   <div class="body">
 {{ content }}
   </div>
+  {% if page.series %}{% include series-nav.html %}{% endif %}
   <p class="back"><a href="{{ '/' | relative_url }}">← All writing</a></p>
 </article>

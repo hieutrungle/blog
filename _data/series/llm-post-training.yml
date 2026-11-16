@@ -1,0 +1,41 @@
+# Parts of the study series "Sharpen or Expand?" (index page and "coming next" labels).
+# A part links to its post automatically once a post with `series: llm-post-training` and that `part` is published.
+- part: 0
+  title: "Overview, roadmap and notation"
+  question: "Why this series?"
+- part: 1
+  title: "What does \"capability\" mean for an LLM?"
+  question: "What are we measuring? Trajectory distributions, pass@1 and pass@k, accessibility, sharpening vs expansion."
+- part: 2
+  title: "Supervised fine-tuning as probability reshaping"
+  question: "What does imitation do to the trajectory distribution?"
+- part: 3
+  title: "DPO from KL-regularized RL"
+  question: "How do we learn from \"this is better than that\"?"
+- part: 4
+  title: "Policy gradients for LLMs: REINFORCE to PPO"
+  question: "How do we sample, evaluate and reinforce?"
+- part: 5
+  title: "GRPO from first principles"
+  question: "How do we get an advantage without a critic?"
+- part: 6
+  title: "Why vanilla GRPO fails"
+  question: "Which design choices bias or starve learning?"
+- part: 7
+  title: "Dr.GRPO, DAPO, RS-GRPO"
+  question: "How do newer algorithms fix each failure?"
+- part: 8
+  title: "What does a verifiable reward teach?"
+  question: "Sparse outcome rewards, verifier errors, reward hacking, credit assignment."
+- part: 9
+  title: "Is the gain real?"
+  question: "pass@k estimation, bootstrap intervals, paired tests, seeds, capability transitions."
+- part: 10
+  title: "Why did it happen?"
+  question: "Matched rollout-token budgets, one-variable ablations, causal controls."
+- part: 11
+  title: "Systems choices that change results"
+  question: "LoRA vs full fine-tuning, BF16, FSDP, vLLM rollouts, policy staleness."
+- part: 12
+  title: "Did RL sharpen or expand?"
+  question: "Reading the experiment's final results."

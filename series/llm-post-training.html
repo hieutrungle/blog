@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Sharpen or Expand? A Study Series on LLM Post-Training"
+description: "All parts of a study series that builds LLM post-training from first principles and asks whether reinforcement learning sharpens or expands what a model can do."
+permalink: /series/llm-post-training/
+---
+{%- assign plan = site.data.series["llm-post-training"] -%}
+{%- assign posts = site.posts | where: "series", "llm-post-training" -%}
+<section class="wrap narrow">
+  <div class="page-head">
+    <h1>Sharpen or Expand?</h1>
+    <p class="lede">A study series on LLM post-training. Does reinforcement learning with verifiable rewards sharpen what a model can already do, or expand what it can solve? Each part derives one piece of the theory from first principles, checks every number it quotes, and connects it to a real experiment.</p>
+  </div>
+  <p>Notes, check scripts and references: <a href="https://github.com/hieutrungle/llm-post-training-notes">llm-post-training-notes</a> · Experiments: <a href="https://github.com/hieutrungle/sharpen-or-expand">sharpen-or-expand</a></p>
+  <ol class="series-list">
+  {%- for q in plan -%}
+    {%- assign post = nil -%}
+    {%- for p in posts -%}{%- assign n = p.part | plus: 0 -%}{%- if n == q.part -%}{%- assign post = p -%}{%- endif -%}{%- endfor -%}
+    <li{% unless post %} class="planned"{% endunless %}>
+      <span class="num">Part {{ q.part }}</span>
+      <span class="t">{% if post %}<a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% else %}{{ q.title }}{% endif %}</span>
+      <span class="q">{{ q.question }}{% if post %} · {{ post.date | date: '%B %-d, %Y' }}{% else %} · planned{% endif %}</span>
+    </li>
+  {%- endfor -%}
+  </ol>
+</section>

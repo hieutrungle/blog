@@ -1,0 +1,21 @@
+{%- comment -%} Series navigation for posts with `series` and `part` front matter. {%- endcomment -%}
+{%- assign info = site.series_info[page.series] -%}
+{%- assign plan = site.data.series[page.series] -%}
+{%- assign parts = site.posts | where: "series", page.series -%}
+{%- assign cur = page.part | plus: 0 -%}
+{%- assign prevn = cur | minus: 1 -%}
+{%- assign nextn = cur | plus: 1 -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}{%- assign next_plan = nil -%}
+{%- for p in parts -%}{%- assign n = p.part | plus: 0 -%}
+{%- if n == prevn -%}{%- assign prev = p -%}{%- endif -%}
+{%- if n == nextn -%}{%- assign next = p -%}{%- endif -%}
+{%- endfor -%}
+{%- for q in plan -%}{%- if q.part == nextn -%}{%- assign next_plan = q -%}{%- endif -%}{%- endfor -%}
+<nav class="series-nav" aria-label="Series navigation">
+  <div class="series-head"><a href="{{ info.url | relative_url }}">{{ info.title }}</a><span>Part {{ cur }} of {{ info.last_part }}</span></div>
+  <div class="series-links">
+    {%- if prev %}<a class="prev" rel="prev" href="{{ prev.url | relative_url }}">← Part {{ prevn }}: {{ prev.short_title | default: prev.title }}</a>{% endif -%}
+    {%- if next %}<a class="next" rel="next" href="{{ next.url | relative_url }}">Part {{ nextn }}: {{ next.short_title | default: next.title }} →</a>
+    {%- elsif next_plan %}<span class="next soon">Next: Part {{ nextn }}, {{ next_plan.title }} (coming soon)</span>{% endif -%}
+  </div>
+</nav>

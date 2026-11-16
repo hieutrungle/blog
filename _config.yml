@@ -17,6 +17,12 @@ defaults:
     values: {layout: post}
 feed:
   path: feed.xml
+# Study series: title, number of the last part, index page (see _includes/series-nav.html)
+series_info:
+  llm-post-training:
+    title: "Sharpen or Expand?"
+    last_part: 12
+    url: /series/llm-post-training/
 exclude:
   - README.md
   - TEMPLATE.md
