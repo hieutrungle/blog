@@ -135,3 +135,14 @@
   .series-list .t a:hover { text-decoration: underline; }
   .series-list .q { grid-column: 2; color: var(--muted); font-size: .95rem; }
   .series-list .planned .t { color: var(--muted); }
+  /* Study-series card on the blog home page, and series tags in the post list */
+  .series-card { background: var(--chip); border: 1px solid var(--line); border-left: 4px solid var(--ink); border-radius: var(--radius); padding: 16px 20px; margin: 8px 0 26px; }
+  .series-card .label { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }
+  .series-card h2 { font-family: var(--serif); font-weight: 600; font-size: 1.55rem; line-height: 1.25; margin: 4px 0 6px; }
+  .series-card h2 a { color: var(--ink); text-decoration: none; }
+  .series-card h2 a:hover { text-decoration: underline; }
+  .series-card p { margin: 0 0 8px; }
+  .series-card .series-meta { color: var(--muted); font-size: .92rem; }
+  .series-card .btn { margin-top: 4px; }
+  .posts .series-tag { color: var(--chip-text); font-weight: 600; text-decoration: none; }
+  .posts .series-tag:hover { text-decoration: underline; }

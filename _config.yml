@@ -21,6 +21,8 @@ feed:
 series_info:
   llm-post-training:
     title: "Sharpen or Expand?"
+    full_title: "Sharpen or Expand? A Study Series on LLM Post-Training"
+    blurb: "Does reinforcement learning sharpen what a language model can already do, or expand what it can solve? LLM post-training built from first principles (SFT, DPO, policy gradients, GRPO and its variants), with every number checked and tied to a real experiment."
     last_part: 12
     url: /series/llm-post-training/
 exclude:
