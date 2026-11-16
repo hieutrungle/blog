@@ -83,7 +83,7 @@
   .posts h2 a { color: var(--ink); text-decoration: none; }
   .posts h2 a:hover { text-decoration: underline; }
   .posts p { margin: 0; color: var(--text); }
-  article { padding: 48px 0 72px; }
+  article.wrap { padding: 48px 20px 72px; }
   article header h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 4vw, 2.7rem); line-height: 1.15; color: var(--ink); margin: 8px 0 10px; }
   article header .meta { color: var(--muted); font-size: .92rem; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   article .body h2 { font-family: var(--serif); font-weight: 600; font-size: 1.6rem; color: var(--ink); margin: 2.2em 0 .4em; }
