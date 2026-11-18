@@ -12,3 +12,15 @@ A post can pin its own address with `permalink:` (the dissertation uses `/disser
 
 ## Dissertation
 `_posts/2026-11-15-dissertation.md` → https://hieutrungle.github.io/blog/dissertation/. Add the approved PDF as `assets/dissertation/Le_dissertation.pdf` and turn the "Full text" button into a link.
+
+## Agentic Systems roadmap
+
+`_data/series/agentic-systems.yml` mirrors the [canonical course index](https://github.com/hieutrungle/agentic-systems-notes/blob/main/docs/curriculum/index.qmd). When the owner approves a title or route change, publish the Quarto site and then update the mirror in the same order as the index. The roadmap workflow checks the mirror against the course source and verifies the published destinations.
+
+From this repository with Agentic Systems Notes checked out next to it, run the same check locally.
+
+```bash
+python3 ../agentic-systems-notes/tests/check_curriculum.py \
+  --blog-roadmap _data/series/agentic-systems.yml \
+  --live-site https://hieutrungle.github.io/agentic-systems-notes/
+```

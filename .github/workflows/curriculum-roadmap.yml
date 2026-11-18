@@ -1,0 +1,39 @@
+name: Check Agentic Systems roadmap
+
+on:
+  pull_request:
+    paths:
+      - _data/series/agentic-systems.yml
+      - .github/workflows/curriculum-roadmap.yml
+  push:
+    branches: [main]
+    paths:
+      - _data/series/agentic-systems.yml
+      - .github/workflows/curriculum-roadmap.yml
+  schedule:
+    - cron: '37 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: blog
+      - uses: actions/checkout@v4
+        with:
+          repository: hieutrungle/agentic-systems-notes
+          ref: main
+          path: course
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: >-
+          python course/tests/check_curriculum.py
+          --blog-roadmap blog/_data/series/agentic-systems.yml
+          --live-site https://hieutrungle.github.io/agentic-systems-notes/

@@ -1,29 +1,29 @@
 # Match titles and filenames in agentic-systems-notes/docs/curriculum/index.qmd.
-- title: "Foundations and baselines"
-  page: 01-foundations.html
-- title: "Tool interfaces and structured outputs"
-  page: 02-tool-interfaces.html
-- title: "Workflow orchestration"
-  page: 03-orchestration.html
-- title: "Planning and replanning"
-  page: 04-planning.html
-- title: "Context construction and retrieval"
-  page: 05-context-retrieval.html
-- title: "Memory and durable state"
-  page: 06-memory-state.html
-- title: "Feedback, verification, and repair"
-  page: 07-feedback.html
-- title: "Multi-agent coordination"
-  page: 08-multiagent.html
-- title: "Tracing, observability, and replay"
-  page: 09-observability.html
-- title: "Evaluation and benchmarking"
-  page: 10-evaluation.html
-- title: "Permissions and trust boundaries"
-  page: 11-trust-boundaries.html
-- title: "Reliability and delivery"
-  page: 12-reliability.html
-- title: "Automated experimentation"
-  page: 13-autoresearch.html
-- title: "Capstone design review"
-  page: 14-capstone.html
+- title: "Agent Fundamentals — What Is an Agent?"
+  page: 01-agent-fundamentals.html
+- title: "Agent Loop and State Machines"
+  page: 02-agent-loop-state-machines.html
+- title: "Tool Use"
+  page: 03-tool-use.html
+- title: "Context, State, and Memory"
+  page: 04-context-state-memory.html
+- title: "Reasoning and Planning"
+  page: 05-reasoning-planning.html
+- title: "Core Agent Architectures"
+  page: 06-agent-architectures.html
+- title: "Multi-Agent Systems"
+  page: 07-multi-agent-systems.html
+- title: "MCP and Agent Interoperability"
+  page: 08-mcp-interoperability.html
+- title: "Agent Evaluation"
+  page: 09-agent-evaluation.html
+- title: "Reliability and Failure Recovery"
+  page: 10-reliability-recovery.html
+- title: "Long-Horizon Agents"
+  page: 11-long-horizon-agents.html
+- title: "Production Agent Infrastructure"
+  page: 12-production-infrastructure.html
+- title: "Learning Agents and Reinforcement Learning"
+  page: 13-learning-agents-rl.html
+- title: "Agentic System Design"
+  page: 14-agentic-system-design.html
