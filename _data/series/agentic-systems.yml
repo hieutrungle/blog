@@ -1,0 +1,29 @@
+# Match titles and filenames in agentic-systems-notes/docs/curriculum/index.qmd.
+- title: "Foundations and baselines"
+  page: 01-foundations.html
+- title: "Tool interfaces and structured outputs"
+  page: 02-tool-interfaces.html
+- title: "Workflow orchestration"
+  page: 03-orchestration.html
+- title: "Planning and replanning"
+  page: 04-planning.html
+- title: "Context construction and retrieval"
+  page: 05-context-retrieval.html
+- title: "Memory and durable state"
+  page: 06-memory-state.html
+- title: "Feedback, verification, and repair"
+  page: 07-feedback.html
+- title: "Multi-agent coordination"
+  page: 08-multiagent.html
+- title: "Tracing, observability, and replay"
+  page: 09-observability.html
+- title: "Evaluation and benchmarking"
+  page: 10-evaluation.html
+- title: "Permissions and trust boundaries"
+  page: 11-trust-boundaries.html
+- title: "Reliability and delivery"
+  page: 12-reliability.html
+- title: "Automated experimentation"
+  page: 13-autoresearch.html
+- title: "Capstone design review"
+  page: 14-capstone.html

@@ -142,6 +142,7 @@
   .series-card h2 a { color: var(--ink); text-decoration: none; }
   .series-card h2 a:hover { text-decoration: underline; }
   .series-card p { margin: 0 0 8px; }
+  .series-card .series-subtitle { color: var(--ink); font-weight: 600; }
   .series-card .series-meta { color: var(--muted); font-size: .92rem; }
   .series-card .btn { margin-top: 4px; }
   .posts .series-tag { color: var(--chip-text); font-weight: 600; text-decoration: none; }

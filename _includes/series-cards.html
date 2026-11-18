@@ -1,0 +1,28 @@
+{% for entry in site.series_info %}
+  {% assign info = entry[1] %}
+  {% assign posts = site.posts | where: "series", entry[0] %}
+  {% if info.type == "external" or posts.size > 0 %}
+    <section class="series-card">
+      <span class="label">Study series</span>
+      {% if include.learning %}
+        <h2><a href="{{ info.url | relative_url }}">{{ info.title }}</a></h2>
+        <p class="series-subtitle">{{ info.subtitle }}</p>
+      {% else %}
+        <h2><a href="{{ info.url | relative_url }}">{{ info.full_title | default: info.title }}</a></h2>
+      {% endif %}
+      <p>{{ info.blurb }}</p>
+      {% if info.type == "external" %}
+        {% if include.learning %}
+          <p>Study agent intelligence and agent infrastructure, from control loops, tools, memory, and planning to coordination, interoperability, evaluation, and production reliability.</p>
+        {% endif %}
+        <p class="series-meta">{{ info.blocks }}-block curriculum · Literature · Labs · System design</p>
+        <a class="btn primary" href="{{ info.url | relative_url }}">Explore series →</a>
+      {% else %}
+        {% assign latest = posts | first %}
+        <p class="series-meta">{{ posts.size }} of {{ info.last_part | plus: 1 }} parts published · Latest: <a href="{{ latest.url | relative_url }}">Part {{ latest.part }}, {{ latest.short_title | default: latest.title }}</a></p>
+        <a class="btn primary" href="{{ info.url | relative_url }}">All parts →</a>
+        {% if include.learning %}<a class="btn" href="{{ info.repo_url }}">Study source on GitHub</a>{% endif %}
+      {% endif %}
+    </section>
+  {% endif %}
+{% endfor %}

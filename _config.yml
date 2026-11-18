@@ -17,14 +17,27 @@ defaults:
     values: {layout: post}
 feed:
   path: feed.xml
-# Study series: title, number of the last part, index page (see _includes/series-nav.html)
+# Study series displayed on the blog homepage and the Learning hub
 series_info:
   llm-post-training:
     title: "Sharpen or Expand?"
     full_title: "Sharpen or Expand? A Study Series on LLM Post-Training"
     blurb: "Does reinforcement learning sharpen what a language model can already do, or expand what it can solve? LLM post-training built from first principles (SFT, DPO, policy gradients, GRPO and its variants), with every number checked and tied to a real experiment."
+    subtitle: "A Study Series on LLM Post-Training"
+    type: local
     last_part: 12
     url: /series/llm-post-training/
+    repo_url: https://github.com/hieutrungle/llm-post-training-notes
+  agentic-systems:
+    title: Agentic Systems
+    subtitle: "Engineering reliable, scalable, production-grade AI agents"
+    blurb: "A 14-block study of how reliable agentic AI systems are designed, evaluated, scaled, and deployed."
+    type: external
+    url: /series/agentic-systems/
+    study_url: https://hieutrungle.github.io/agentic-systems-notes/
+    curriculum_path: curriculum/
+    repo_url: https://github.com/hieutrungle/agentic-systems-notes
+    blocks: 14
 exclude:
   - README.md
   - TEMPLATE.md

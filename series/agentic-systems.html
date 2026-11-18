@@ -1,0 +1,50 @@
+---
+layout: default
+title: Agentic Systems
+description: A 14-block study of how reliable agentic AI systems are designed, evaluated, scaled, and deployed.
+permalink: /series/agentic-systems/
+---
+{% assign info = site.series_info["agentic-systems"] %}
+{% assign curriculum_url = info.study_url | append: info.curriculum_path %}
+<article class="wrap narrow">
+  <header>
+    <h1>{{ info.title }}</h1>
+    <p class="lede">{{ info.subtitle }}</p>
+    <div class="btns">
+      <a class="btn primary" href="{{ curriculum_url }}">Start the curriculum</a>
+      <a class="btn" href="{{ info.study_url }}">Study site</a>
+      <a class="btn" href="{{ info.repo_url }}">GitHub</a>
+    </div>
+  </header>
+  <div class="body">
+    <h2>About the series</h2>
+    <p>{{ info.blurb }} The running question is when giving a system more control improves outcomes enough to justify the added cost and failure modes.</p>
+
+    <h2>What you will learn</h2>
+    <ul>
+      <li><strong>Agent intelligence.</strong> Design control loops and tool interfaces, construct context and memory, and decide when to plan, replan, or delegate.</li>
+      <li><strong>Agent infrastructure.</strong> Design for interoperability and durable state, trace decisions, evaluate outcomes, enforce permissions, and recover from failures in long-running work.</li>
+    </ul>
+
+    <h2>{{ info.blocks }}-block curriculum</h2>
+    <ol class="series-list">
+      {% for block in site.data.series["agentic-systems"] %}
+        <li><span class="num">Block {{ forloop.index | prepend: "0" | slice: -2, 2 }}</span><span class="t"><a href="{{ curriculum_url | append: block.page }}">{{ block.title }}</a></span></li>
+      {% endfor %}
+    </ol>
+
+    <h2>Primary companion references</h2>
+    <p>The books provide practical reading alongside an independent curriculum organized around first-principles architecture, original research, production systems, and system design.</p>
+    <ul>
+      <li><strong>AI Agents in Action, Second Edition</strong><br>Intelligent workflows with LLMs, MCP, A2A, and more</li>
+      <li><strong>Building Applications with AI Agents</strong></li>
+    </ul>
+
+    <h2>Research orientation</h2>
+    <p>Compare each architectural change with a baseline. Ask what changed in the model, tools, context, search, compute, orchestration, or evaluation, and what the improvement cost. Use the <a href="{{ info.study_url | append: 'literature/' }}">literature reviews</a> to examine the evidence and the <a href="{{ info.study_url | append: 'labs/' }}">labs</a> to reproduce the course examples.</p>
+
+    <h2>Running case study</h2>
+    <p><a href="{{ info.study_url | append: 'case-studies/autoresearch.html' }}">AutoResearch</a> starts with a hypothesis, an experiment, a metric, and a decision. Later blocks use the same case to reason about planning, compute budgets, experiment records, parallel work, and recovery.</p>
+  </div>
+  <p class="back"><a href="{{ '/learning/' | relative_url }}">← Learning</a></p>
+</article>

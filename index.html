@@ -8,20 +8,7 @@ description: Research, study notes, and knowledge sharing by Hieu T. Le.
     <h1>Blog</h1>
     <p class="lede">Research, study notes, and knowledge sharing.</p>
   </div>
-  {%- for entry in site.series_info -%}
-  {%- assign sname = entry[0] -%}{%- assign sinfo = entry[1] -%}
-  {%- assign sposts = site.posts | where: "series", sname -%}
-  {%- if sposts.size > 0 -%}
-  {%- assign latest = sposts | first -%}
-  <section class="series-card" aria-label="Study series">
-    <span class="label">Study series</span>
-    <h2><a href="{{ sinfo.url | relative_url }}">{{ sinfo.full_title | default: sinfo.title }}</a></h2>
-    <p>{{ sinfo.blurb }}</p>
-    <p class="series-meta">{{ sposts.size }} of {{ sinfo.last_part | plus: 1 }} parts published · Latest: <a href="{{ latest.url | relative_url }}">Part {{ latest.part }}, {{ latest.short_title | default: latest.title }}</a></p>
-    <a class="btn primary" href="{{ sinfo.url | relative_url }}">All parts →</a>
-  </section>
-  {%- endif -%}
-  {%- endfor %}
+  {% include series-cards.html %}
   <ul class="posts">
   {% for post in site.posts %}
     <li>
